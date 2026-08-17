@@ -1,0 +1,21 @@
+{
+  "name": "webhook-idempotency-task",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Webhook processing service used for an Odyssey coding benchmark",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "test": "jest --runInBand",
+    "test:concurrent": "jest --runInBand tests/webhook.test.ts",
+    "clean": "powershell -Command \"Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue\""
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.8.3"
+  }
+}
